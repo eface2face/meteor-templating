@@ -1,8 +1,8 @@
-var _ = require("lodash");
-var Meteor = require("meteor-core");
-var Blaze = require("meteor-blaze");
-var UI = {};
-var Template;
+module.exports = function(Meteor) {
+  var _ = Meteor.underscore;
+  var Blaze = Meteor.Blaze;
+  var UI = {};
+  var Template;
 
 // Packages and apps add templates on to this object.
 
@@ -83,4 +83,5 @@ UI.body = Template.body;
 Template.__body__ = Template.body;
 Template.__body__.__contentParts = Template.body.contentViews;
 Template.__body__.__instantiate = Template.body.renderToDocument;
-module.exports = Template;
+  Meteor.Template = Template;
+};
