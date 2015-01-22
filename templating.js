@@ -2,7 +2,7 @@ var _ = require("lodash");
 var Meteor = require("meteor-core");
 var Blaze = require("meteor-blaze");
 var UI = {};
-var SpacebarsCompiler;
+var Template;
 
 // Packages and apps add templates on to this object.
 
